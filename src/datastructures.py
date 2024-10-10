@@ -13,25 +13,7 @@ class FamilyStructure:
         self.last_name = last_name
         self._next_id=0
         # example list of members
-        self._members = [{
-            "first_name": "John",
-            "age": "33",
-            "lucky_numbers": [7,13,22],
-            "id": 1
-        },
-        {
-            "first_name": "Jane",
-            "age": "35",
-            "lucky_numbers": [10,14,3],
-            "id": 2
-        },
-        {
-            "first_name": "Jimmy",
-            "age": "5",
-            "lucky_numbers": [1],
-            "id": 3
-        },
-        ]
+        self._members = []
 
     
 
@@ -46,7 +28,7 @@ class FamilyStructure:
             print ("La edad debe ser mayor a 0")
             return False
         if not "id" in member:
-            member["id"]=self._generateId()
+            member["id"]=self._generate_id()
             member["id"]=self._next_id
         member["last_name"]=self.last_name
         self._members.append(member)
